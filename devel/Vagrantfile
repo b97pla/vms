@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     d.pull_images "parente/ipython-notebook"
     d.pull_images "pblittle/docker-logstash"
     d.run "tutum/couchdb",
-      args: "-p 5984:5984 -e COUCHDB_PASS='snpseq' -v '/srv/code/couchdb:/var/lib/couchdb'" ,
+      args: "-p 5984:5984 -e COUCHDB_PASS='changeme' -v '/srv/code/couchdb:/var/lib/couchdb'" ,
       daemonize: true
     d.run "parente/ipython-notebook",
       args: "-p 8888:8888 -v '/srv/code:/opt/code' -v '/srv/code/notebooks:/notebooks'",
